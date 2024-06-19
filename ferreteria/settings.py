@@ -16,8 +16,6 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
 
-CSRF_TRUSTED_ORIGINS = env('CSRF_TRUSTED_ORIGINS')
-
 LOGIN_URL = 'login_view'
 
 SESSION_COOKIE_SAMESITE = 'None'
@@ -97,8 +95,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
-
+STATIC_URL = '/static/' 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
