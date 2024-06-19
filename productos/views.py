@@ -9,7 +9,7 @@ import re
 
 import pandas as pd
 
-@login_required
+
 def manejo_archivos_fenix(request, file):
     try:
         proveedor_nombre = 'Distribuidora Sanitaria Fenix'
@@ -58,7 +58,7 @@ def manejo_archivos_fenix(request, file):
     except Exception as e:
         raise ValueError(f"Error al procesar el archivo Excel: {e}")
 
-@login_required
+#@login_required
 def listar_y_subir_productos_fenix(request):
     if request.method == 'POST':
         form = SubirArchivos_fenix(request.POST, request.FILES)
@@ -71,7 +71,7 @@ def listar_y_subir_productos_fenix(request):
     precios = Precio.objects.filter(proovedor__nombre='Distribuidora Sanitaria Fenix')
     return render(request, 'listar_productos_fenix.html', {'form': form, 'productos': productos, 'precios': precios})
 
-@login_required
+
 def manejo_archivos_palomar(request, file):
     try:
         proveedor_nombre = 'Distrito Palomar'
@@ -120,7 +120,7 @@ def manejo_archivos_palomar(request, file):
     except Exception as e:
         raise ValueError(f"Error al procesar el archivo Excel: {e}")
 
-@login_required
+#@login_required
 def listar_y_subir_productos_palomar(request):
     if request.method == 'POST':
         form = SubirArchivos_palomar(request.POST, request.FILES)
@@ -177,7 +177,7 @@ def manejo_archivos_electrimat(request, file):
     except Exception as e:
         raise ValueError(f"Error al procesar el archivo Excel: {e}")
 
-@login_required
+#@login_required
 def listar_y_subir_productos_electrimat(request):
     if request.method == 'POST':
         form = SubirArchivos_electrimat(request.POST, request.FILES)
