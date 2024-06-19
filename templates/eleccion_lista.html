@@ -1,0 +1,12 @@
+
+{% extends "base/base.html" %}
+
+    {% block content %}
+
+    <div class="container">
+        <a href="{% url 'listar_productos_fenix' %}" class="btn btn-dark">Fenix</a>
+        <a href="{% url 'listar_productos_palomar' %}" class="btn btn-dark">Palomar</a>
+        <a href="{% url 'listar_productos_electrimat' %}" class="btn btn-dark">Electrimat</a>
+    </div>
+
+{% endblock %}
