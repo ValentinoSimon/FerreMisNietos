@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Producto, Precio, Proovedor, Marca
 from decimal import Decimal, InvalidOperation
-from django.contrib.auth.decorators import login_required
 from .forms import SubirArchivos_fenix, SubirArchivos_palomar, SubirArchivos_electrimat
 import re
 
@@ -58,7 +57,7 @@ def manejo_archivos_fenix(request, file):
     except Exception as e:
         raise ValueError(f"Error al procesar el archivo Excel: {e}")
 
-#@login_required
+
 def listar_y_subir_productos_fenix(request):
     if request.method == 'POST':
         form = SubirArchivos_fenix(request.POST, request.FILES)
@@ -120,7 +119,7 @@ def manejo_archivos_palomar(request, file):
     except Exception as e:
         raise ValueError(f"Error al procesar el archivo Excel: {e}")
 
-#@login_required
+
 def listar_y_subir_productos_palomar(request):
     if request.method == 'POST':
         form = SubirArchivos_palomar(request.POST, request.FILES)
@@ -177,7 +176,7 @@ def manejo_archivos_electrimat(request, file):
     except Exception as e:
         raise ValueError(f"Error al procesar el archivo Excel: {e}")
 
-#@login_required
+
 def listar_y_subir_productos_electrimat(request):
     if request.method == 'POST':
         form = SubirArchivos_electrimat(request.POST, request.FILES)
