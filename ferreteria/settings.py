@@ -6,10 +6,8 @@ import environ
 env = environ.Env()
 
 # Lee la variable CSRF_TRUSTED_ORIGINS desde el archivo .env
-CSRF_TRUSTED_ORIGINS = [
-    'https://ferremisnietos.koyeb.app',
-    'https://unexpected-yoko-ferremisnietos-507fa77f.koyeb.app'
-]
+CSRF_TRUSTED_ORIGINS ='https://unexpected-yoko-ferremisnietos-507fa77f.koyeb.app'
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
