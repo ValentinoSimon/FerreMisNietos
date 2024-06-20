@@ -3,10 +3,17 @@
 
     {% block content %}
 
-    <div class="container">
+    <div class="container-list">
+        <H2>Elije que lista deseas ver</H2>
         <a href="{% url 'listar_productos_fenix' %}" class="btn btn-dark">Fenix</a>
         <a href="{% url 'listar_productos_palomar' %}" class="btn btn-dark">Palomar</a>
         <a href="{% url 'listar_productos_electrimat' %}" class="btn btn-dark">Electrimat</a>
     </div>
+
+    <style>
+        .container-list{
+            text-align: center;
+        }
+    </style>
 
 {% endblock %}
