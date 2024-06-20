@@ -20,8 +20,6 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 LOGIN_URL = 'login_view'
 
-SESSION_COOKIE_SAMESITE = 'None'
-
 CSRF_COOKIE_SAMESITE = 'None'
 
 CSRF_COOKIE_SECURE = True
