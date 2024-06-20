@@ -7,8 +7,11 @@
                 {{ form.as_p }}
                 <button type="submit">Subir</button>
             </form>
-
-            <h1 class="title">LISTA DE PRODUCTOS</h1>
+            <div class="btn-container">
+                <a href="{% url 'listar_productos_fenix' %}" class="btn btn-outline-dark">Ver Lista Electrimat</a>
+                <a href="{% url 'listar_productos_palomar' %}" class="btn btn-outline-dark">Ver Lista Palomar</a>
+            </div>
+            <h1 class="title">LISTA DE PRODUCTOS FENIX</h1>
             <table class="tabla" border="1">
                 <thead>
                     <tr>
@@ -46,4 +49,14 @@
 
                 </tbody>
             </table>
+        <style>
+            .btn-container {
+                text-align: center;
+                margin: 20px 0;
+            }
+        
+            .btn-container .btn {
+                margin: 0 10px;
+            }
+        </style>
     {% endblock content %}
